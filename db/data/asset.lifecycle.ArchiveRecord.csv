@@ -1,0 +1,4 @@
+archive_id,asset_asset_id,archived_at,archived_by_employee_id,reason,disposal_method,disposal_cert_no
+66666666-1111-1111-1111-111111111111,17171717-aaaa-bbbb-cccc-171717171717,2026-06-15T10:00:00Z,aaaaaaaa-1111-1111-1111-111111111111,End of lifecycle,E-Waste Disposal,CERT001
+66666666-2222-2222-2222-222222222222,13131313-aaaa-bbbb-cccc-131313131313,2026-07-10T11:00:00Z,bbbbbbbb-2222-2222-2222-222222222222,Hardware obsolete,Vendor Buyback,CERT002
+66666666-3333-3333-3333-333333333333,66666666-aaaa-bbbb-cccc-666666666666,2026-08-05T09:30:00Z,cccccccc-3333-3333-3333-333333333333,Device replacement,Donation,CERT003

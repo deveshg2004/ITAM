@@ -1,0 +1,1 @@
+using AssetLifecycleService as service from '../../srv/asset-service';

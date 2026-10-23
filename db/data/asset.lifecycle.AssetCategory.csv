@@ -1,0 +1,9 @@
+asset_category_id,name,lifespan_months
+11111111-abcd-abcd-abcd-111111111111,Laptop,48
+22222222-abcd-abcd-abcd-222222222222,Desktop,60
+33333333-abcd-abcd-abcd-333333333333,Monitor,60
+44444444-abcd-abcd-abcd-444444444444,Mobile,36
+55555555-abcd-abcd-abcd-555555555555,Printer,72
+66666666-abcd-abcd-abcd-666666666666,Keyboard,24
+77777777-abcd-abcd-abcd-777777777777,Mouse,24
+88888888-abcd-abcd-abcd-888888888888,Headset,36

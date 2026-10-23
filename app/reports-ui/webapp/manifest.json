@@ -1,0 +1,117 @@
+{
+  "_version": "1.89.0",
+  "sap.app": {
+    "id": "asset.lifecycle.reportsui",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.33.0",
+      "toolsId": "3629a2f7-7d95-4e50-9a41-f8ddd88470da"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/asset-lifecycle/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.153.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "asset.lifecycle.reportsui.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "asset.lifecycle.reportsui.view",
+        "async": true,
+        "viewPath": "asset.lifecycle.reportsui.view"
+      },
+      "routes": [
+        {
+          "name": "RouteReports",
+          "pattern": ":?query:",
+          "target": [
+            "TargetReports"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetReports": {
+          "id": "Reports",
+          "name": "Reports"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "asset.lifecycle.reportsui.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

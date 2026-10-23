@@ -1,0 +1,11 @@
+{
+  "welcomeFile": "/dashboard-ui/webapp/index.html",
+  "routes": [
+    {
+      "source": "^/(.*)$",
+      "target": "$1",
+      "destination": "srv-api",
+      "csrfProtection": true
+    }
+  ]
+}

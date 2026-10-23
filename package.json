@@ -1,0 +1,56 @@
+{
+  "name": "it-asset-lifecycle-manager",
+  "version": "1.0.0",
+  "description": "Welcome to your new CAP project.",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx cds serve",
+    "watch-asset-ui": "cds watch --open asset.lifecycle.assetui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-employee-ui": "cds watch --open asset.lifecycle.employeeui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-assetassignment-ui": "cds watch --open asset.lifecycle.assetassignmentui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-maintenance-ui": "cds watch --open asset.lifecycle.maintenanceui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-ownershipledger-ui": "cds watch --open asset.lifecycle.ownershipledgerui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-archive-ui": "cds watch --open asset.lifecycle.archiveui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-dashboard-ui": "cds watch --open asset.lifecycle.dashboardui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-manager-dashboard-ui": "cds watch --open asset.lifecycle.managerdashboardui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-department-ui": "cds watch --open asset.lifecycle.departmentui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-reports-ui": "cds watch --open asset.lifecycle.reportsui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-employee-dashboard-ui": "cds watch --open asset.lifecycle.employeedashboardui/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "dependencies": {
+    "@cap-js/hana": "^3.1.2",
+    "@cap-js/sqlite": "^3.1.2",
+    "@sap/cds": "^10.1.1",
+    "@sap/cds-dk": "^10.1.0",
+    "@sap/xssec": "^4"
+  },
+  "sapux": [
+    "app/asset-ui",
+    "app/employee-ui",
+    "app/assetassignment-ui",
+    "app/maintenance-ui",
+    "app/ownershipledger-ui",
+    "app/archive-ui",
+    "app/department-ui"
+  ],
+  "workspaces": [
+    "app/*"
+  ],
+  "devDependencies": {
+    "cds-plugin-ui5": "^0.17.0"
+  },
+  "cds": {
+  "requires": {
+    "[hybrid]": {
+      "auth": "xsuaa"
+    },
+    "[production]": {
+      "auth": "xsuaa"
+    }
+  }
+}
+}

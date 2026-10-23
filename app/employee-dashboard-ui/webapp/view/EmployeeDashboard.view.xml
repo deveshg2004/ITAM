@@ -1,0 +1,140 @@
+<mvc:View
+    controllerName="asset.lifecycle.employeedashboardui.controller.EmployeeDashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls">
+
+    <Page
+        id="employeeDashboardPage"
+        title="Employee Dashboard">
+
+        <content>
+
+            <VBox
+                id="employeeDashboardVBox"
+                class="sapUiMediumMargin">
+
+                <Title
+                    id="employeeAccessTitle"
+                    text="Quick Access"
+                    level="H2"/>
+
+                <HBox
+                    id="employeeNavigationBar"
+                    justifyContent="Center"
+                    class="sapUiMediumMarginBottom">
+
+                    <Button
+                        id="profileBtn"
+                        text="My Profile"
+                        press="onMyProfile"
+                        type="Emphasized"
+                        class="sapUiTinyMarginEnd"/>
+
+                    <Button
+                        id="assetsBtn"
+                        text="My Assets"
+                        press="onMyAssets"
+                        class="sapUiTinyMarginEnd"/>
+
+                    <Button
+                        id="requestsBtn"
+                        text="My Requests"
+                        press="onMyRequests"
+                        class="sapUiTinyMarginEnd"/>
+
+                    <Button
+                        id="maintenanceBtn"
+                        text="Maintenance History"
+                        press="onMaintenanceHistory"/>
+
+                </HBox>
+
+                <!-- <MessageStrip
+                    id="employeeInfoStrip"
+                    text="Select an option from Quick Access to view details."
+                    type="Information"
+                    showIcon="true"
+                    class="sapUiMediumMarginBottom"/> -->
+
+                <Title
+                    id="contentTitle"
+                    text="Welcome"
+                    level="H3"/>
+
+                <Text
+                    id="contentText"
+                    wrapping="true"
+                    text="Choose My Profile, My Assets, My Requests, or Maintenance History."/>
+
+                <Title
+                    id="employeeKpiTitle"
+                    text="My Dashboard"
+                    level="H2"
+                    class="sapUiMediumMarginTop"/>
+
+                <HBox
+                    id="employeeKpiHBox"
+                    justifyContent="SpaceAround"
+                    wrap="Wrap">
+
+                    <GenericTile
+                        id="tileAssignedAssets"
+                        header="My Assets">
+
+                        <TileContent id="tcAssignedAssets">
+                            <NumericContent
+                                id="ncAssignedAssets"
+                                value="3"
+                                valueColor="Good"/>
+                        </TileContent>
+
+                    </GenericTile>
+
+                    <GenericTile
+                        id="tilePendingReturns"
+                        header="Pending Returns">
+
+                        <TileContent id="tcPendingReturns">
+                            <NumericContent
+                                id="ncPendingReturns"
+                                value="1"
+                                valueColor="Critical"/>
+                        </TileContent>
+
+                    </GenericTile>
+
+                    <GenericTile
+                        id="tileMaintenanceRequests"
+                        header="Maintenance Requests">
+
+                        <TileContent id="tcMaintenanceRequests">
+                            <NumericContent
+                                id="ncMaintenanceRequests"
+                                value="1"
+                                valueColor="Neutral"/>
+                        </TileContent>
+
+                    </GenericTile>
+
+                </HBox>
+
+                <Title
+                    id="myAssetsTitle"
+                    text="My Asset Distribution"
+                    level="H2"
+                    class="sapUiMediumMarginTop"/>
+
+                <viz:VizFrame
+                    id="employeeAssetChart"
+                    vizType="donut"
+                    width="100%"
+                    height="400px"/>
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

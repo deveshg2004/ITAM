@@ -1,0 +1,100 @@
+<mvc:View
+    controllerName="asset.lifecycle.reportsui.controller.Reports"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page
+        id="reportsPage"
+        title="Reports &amp; Export">
+
+        <content>
+
+            <VBox
+                id="reportsVBox"
+                class="sapUiMediumMargin">
+
+                <ObjectHeader
+                    id="reportsHeader"
+                    title="Reports &amp; Export Center"
+                    intro="Asset Lifecycle Reporting"
+                    number="1.0"
+                    numberUnit="Version"/>
+
+                <Title
+                    id="reportsTitle"
+                    text="Available Reports"
+                    level="H1"/>
+
+                <List id="reportsList">
+
+                    <StandardListItem
+                        id="assetReport"
+                        title="Asset Report"
+                        description="View and export asset inventory"
+                        type="Navigation"
+                        press=".onAssetReport"/>
+
+                    <StandardListItem
+                        id="employeeReport"
+                        title="Employee Report"
+                        description="View and export employee details"
+                        type="Navigation"
+                        press=".onEmployeeReport"/>
+
+                    <StandardListItem
+                        id="maintenanceReport"
+                        title="Maintenance Report"
+                        description="View and export maintenance records"
+                        type="Navigation"
+                        press=".onMaintenanceReport"/>
+
+                    <StandardListItem
+                        id="assignmentReport"
+                        title="Assignment Report"
+                        description="View and export asset assignments"
+                        type="Navigation"
+                        press=".onAssignmentReport"/>
+
+                </List>
+
+                <Title
+                    id="exportTitle"
+                    text="Export Functions"
+                    level="H2"
+                    class="sapUiMediumMarginTop"/>
+
+                <VBox id="exportButtons">
+
+                    <Button
+                        id="btnExportAssets"
+                        text="Export Asset Report"
+                        type="Emphasized"
+                        press=".onExportAssets"/>
+
+                    <Button
+                        id="btnExportEmployees"
+                        text="Export Employee Report"
+                        class="sapUiSmallMarginTop"
+                        press=".onExportEmployees"/>
+
+                    <Button
+                        id="btnExportMaintenance"
+                        text="Export Maintenance Report"
+                        class="sapUiSmallMarginTop"
+                        press=".onExportMaintenance"/>
+
+                    <Button
+                        id="btnExportAssignments"
+                        text="Export Assignment Report"
+                        class="sapUiSmallMarginTop"
+                        press=".onExportAssignments"/>
+
+                </VBox>
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

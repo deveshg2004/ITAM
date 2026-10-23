@@ -1,0 +1,186 @@
+### CREATE EMPLOYEE
+
+POST http://localhost:4004/odata/v4/asset-lifecycle/createEmployee
+Content-Type: application/json
+
+{
+    "employee_id":"99999999-9999-9999-9999-999999999999",
+    "full_name":"Test Employee",
+    "email":"test.employee@company.com",
+    "phone":"9999999999",
+    "location":"Chennai",
+    "status":"ACTIVE"
+}
+
+###
+
+### UPDATE EMPLOYEE
+
+POST http://localhost:4004/odata/v4/asset-lifecycle/updateEmployee
+Content-Type: application/json
+
+{
+    "employee_id":"99999999-9999-9999-9999-999999999999",
+    "phone":"8888888888",
+    "location":"Bangalore",
+    "status":"ACTIVE"
+}
+
+###
+
+### DELETE EMPLOYEE
+
+POST http://localhost:4004/odata/v4/asset-lifecycle/deleteEmployee
+Content-Type: application/json
+
+{
+    "employee_id":"99999999-9999-9999-9999-999999999999"
+}
+
+### Create Asset
+POST http://localhost:4004/odata/v4/asset-lifecycle/createAsset
+Content-Type: application/json
+
+{
+  "asset_id":"99999999-aaaa-aaaa-aaaa-999999999999",
+  "asset_tag":"TEST001",
+  "serial_number":"SNTEST001",
+  "model":"Demo Laptop",
+  "purchase_cost":50000
+}
+
+
+### Update Asset
+POST http://localhost:4004/odata/v4/asset-lifecycle/updateAsset
+Content-Type: application/json
+
+{
+  "asset_id":"99999999-aaaa-aaaa-aaaa-999999999999",
+  "status":"ASSIGNED"
+}
+
+
+### Delete Asset
+POST http://localhost:4004/odata/v4/asset-lifecycle/deleteAsset
+Content-Type: application/json
+
+{
+  "asset_id":"99999999-aaaa-aaaa-aaaa-999999999999"
+}
+
+
+
+### createMaintenanceRecord
+POST http://localhost:4004/odata/v4/asset-lifecycle/createMaintenanceRecord
+Content-Type: application/json
+
+{
+  "maintenance_id":"99999999-bbbb-bbbb-bbbb-999999999999",
+  "type":"Test Maintenance",
+  "status":"OPEN",
+  "cost":5000
+}
+
+
+### updateMaintenanceRecord
+POST http://localhost:4004/odata/v4/asset-lifecycle/updateMaintenanceRecord
+Content-Type: application/json
+
+{
+  "maintenance_id":"99999999-bbbb-bbbb-bbbb-999999999999",
+  "status":"COMPLETED"
+}
+
+
+### deleteMaintenanceRecord
+POST http://localhost:4004/odata/v4/asset-lifecycle/deleteMaintenanceRecord
+Content-Type: application/json
+
+{
+  "maintenance_id":"99999999-bbbb-bbbb-bbbb-999999999999"
+}
+
+
+### ASSIGN ASSET
+
+POST http://localhost:4004/odata/v4/asset-lifecycle/AssignAsset
+Content-Type: application/json
+
+{
+    "assetId":"11111111-aaaa-bbbb-cccc-111111111111",
+    "employeeId":"aaaaaaaa-1111-1111-1111-111111111111"
+}
+
+### TRANSFER ASSET
+
+POST http://localhost:4004/odata/v4/asset-lifecycle/TransferAsset
+Content-Type: application/json
+
+{
+    "assetId":"11111111-aaaa-bbbb-cccc-111111111111",
+    "fromEmployeeId":"aaaaaaaa-1111-1111-1111-111111111111",
+    "toEmployeeId":"bbbbbbbb-2222-2222-2222-222222222222"
+}
+
+
+### RETURN ASSET
+
+POST http://localhost:4004/odata/v4/asset-lifecycle/ReturnAsset
+Content-Type: application/json
+
+{
+    "assetId":"11111111-aaaa-bbbb-cccc-111111111111"
+}
+
+
+### RETIRE ASSET
+
+POST http://localhost:4004/odata/v4/asset-lifecycle/RetireAsset
+Content-Type: application/json
+
+{
+    "assetId":"17171717-aaaa-bbbb-cccc-171717171717",
+    "reason":"End of lifecycle"
+}
+
+
+
+### ARCHIVE ASSET
+
+POST http://localhost:4004/odata/v4/asset-lifecycle/ArchiveAsset
+Content-Type: application/json
+
+{
+    "assetId":"17171717-aaaa-bbbb-cccc-171717171717",
+    "reason":"Disposed as e-waste"
+}
+
+### REQUEST ASSET
+
+POST http://localhost:4004/odata/v4/asset-lifecycle/RequestAsset
+Content-Type: application/json
+
+{
+    "employeeId":"aaaaaaaa-1111-1111-1111-111111111111",
+    "assetId":"22222222-aaaa-bbbb-cccc-222222222222"
+}
+
+
+### APPROVE ASSET REQUEST
+
+POST http://localhost:4004/odata/v4/asset-lifecycle/ApproveAssetRequest
+Content-Type: application/json
+
+{
+    "assignmentId":"99999999-1111-1111-1111-111111111111"
+}
+
+
+### COMPLETE MAINTENANCE
+
+POST http://localhost:4004/odata/v4/asset-lifecycle/CompleteMaintenance
+Content-Type: application/json
+
+{
+    "maintenanceId":"88888888-1111-1111-1111-111111111111"
+}

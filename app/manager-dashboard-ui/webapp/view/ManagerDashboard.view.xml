@@ -1,0 +1,129 @@
+<mvc:View
+    controllerName="asset.lifecycle.managerdashboardui.controller.ManagerDashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls">
+
+    <Page
+        id="managerDashboardPage"
+        title="Manager Dashboard">
+
+        <content>
+
+            <VBox
+                id="managerDashboardVBox"
+                class="sapUiMediumMargin">
+
+
+                <Title
+                    id="managerKpiTitle"
+                    text="Manager KPIs"
+                    level="H1"/>
+
+                <HBox
+                    id="managerKpiHBox"
+                    justifyContent="SpaceAround"
+                    wrap="Wrap">
+
+                    <GenericTile
+                        id="tileAssetsAssigned"
+                        header="Assets Assigned">
+                        <TileContent id="tcAssetsAssigned">
+                            <NumericContent
+                                id="ncAssetsAssigned"
+                                value="8"
+                                valueColor="Good"/>
+                        </TileContent>
+                    </GenericTile>
+
+                    <GenericTile
+                        id="tileActiveEmployees"
+                        header="Active Employees">
+                        <TileContent id="tcActiveEmployees">
+                            <NumericContent
+                                id="ncActiveEmployees"
+                                value="10"
+                                valueColor="Good"/>
+                        </TileContent>
+                    </GenericTile>
+
+                    <GenericTile
+                        id="tileMaintenanceRequests"
+                        header="Maintenance Requests">
+                        <TileContent id="tcMaintenanceRequests">
+                            <NumericContent
+                                id="ncMaintenanceRequests"
+                                value="2"
+                                valueColor="Critical"/>
+                        </TileContent>
+                    </GenericTile>
+
+                    <GenericTile
+                        id="tilePendingReturns"
+                        header="Pending Returns">
+                        <TileContent id="tcPendingReturns">
+                            <NumericContent
+                                id="ncPendingReturns"
+                                value="1"
+                                valueColor="Neutral"/>
+                        </TileContent>
+                    </GenericTile>
+
+                </HBox>
+
+                <Title
+    id="managerChartTitle"
+    text="Assets Assigned by Department"
+    level="H2"
+    class="sapUiMediumMarginTop"/>
+
+<viz:VizFrame
+    id="departmentBarChart"
+    vizType="bar"
+    width="100%"
+    height="400px"/>
+
+                <Title
+                    id="managerNavigationTitle"
+                    text="Quick Navigation"
+                    level="H2"
+                    class="sapUiMediumMarginTop"/>
+
+<HBox
+    id="managerNavigationTiles"
+    justifyContent="SpaceAround"
+    wrap="Wrap">
+
+    <GenericTile
+        id="managerNavAssetTile"
+        header="Asset Management"
+        subheader="Manage Assets"
+        press=".onAssetManagement"/>
+
+    <GenericTile
+        id="managerNavEmployeeTile"
+        header="Employee Management"
+        subheader="Manage Employees"
+        press=".onEmployeeManagement"/>
+
+    <GenericTile
+        id="managerNavAssignmentTile"
+        header="Asset Assignment"
+        subheader="Assign Assets"
+        press=".onAssignmentManagement"/>
+
+    <GenericTile
+        id="managerNavMaintenanceTile"
+        header="Maintenance"
+        subheader="Track Repairs"
+        press=".onMaintenanceManagement"/>
+
+</HBox>
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

@@ -1,0 +1,170 @@
+<mvc:View
+    controllerName="asset.lifecycle.dashboardui.controller.AssetDashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:core="sap.ui.core">
+
+    <Page
+        id="dashboardPage"
+        title="Admin Dashboard">
+
+        <content>
+
+            <VBox
+                id="dashboardVBox"
+                class="sapUiMediumMargin">
+
+
+                <Title
+                    id="kpiTitle"
+                    text="Dashboard KPIs"
+                    level="H1"/>
+
+                <HBox
+                    id="kpiHBox"
+                    justifyContent="SpaceAround"
+                    wrap="Wrap">
+
+                    <GenericTile
+                        id="tileTotalAssets"
+                        header="Total Assets">
+                        <TileContent id="tcTotalAssets">
+                            <NumericContent
+                                id="ncTotalAssets"
+                                value="15"
+                                valueColor="Good"/>
+                        </TileContent>
+                    </GenericTile>
+
+                    <GenericTile
+                        id="tileAssignedAssets"
+                        header="Assigned Assets">
+                        <TileContent id="tcAssignedAssets">
+                            <NumericContent
+                                id="ncAssignedAssets"
+                                value="8"
+                                valueColor="Neutral"/>
+                        </TileContent>
+                    </GenericTile>
+
+                    <GenericTile
+                        id="tileAvailableAssets"
+                        header="Available Assets">
+                        <TileContent id="tcAvailableAssets">
+                            <NumericContent
+                                id="ncAvailableAssets"
+                                value="4"
+                                valueColor="Good"/>
+                        </TileContent>
+                    </GenericTile>
+
+                    <GenericTile
+                        id="tileMaintenance"
+                        header="Under Maintenance">
+                        <TileContent id="tcMaintenance">
+                            <NumericContent
+                                id="ncMaintenance"
+                                value="2"
+                                valueColor="Critical"/>
+                        </TileContent>
+                    </GenericTile>
+
+                    <GenericTile
+                        id="tileRetired"
+                        header="Retired Assets">
+                        <TileContent id="tcRetired">
+                            <NumericContent
+                                id="ncRetired"
+                                value="1"
+                                valueColor="Neutral"/>
+                        </TileContent>
+                    </GenericTile>
+
+                    <GenericTile
+                        id="tileArchived"
+                        header="Archived Assets">
+                        <TileContent id="tcArchived">
+                            <NumericContent
+                                id="ncArchived"
+                                value="1"
+                                valueColor="Error"/>
+                        </TileContent>
+                    </GenericTile>
+
+                </HBox>
+
+<Title
+    id="categoryChartTitle"
+    text="Assets by Category"
+    level="H2"
+    class="sapUiMediumMarginTop"/>
+
+<viz:VizFrame
+    id="assetCategoryChart"
+    vizType="donut"
+    width="100%"
+    height="400px"/>
+
+                <Title
+                    id="navigationTitle"
+                    text="Quick Navigation"
+                    level="H2"
+                    class="sapUiMediumMarginTop"/>
+
+<HBox
+    id="navigationTiles"
+    justifyContent="SpaceAround"
+    wrap="Wrap">
+
+    <GenericTile
+        id="navAssetTile"
+        header="Asset Management"
+        subheader="Manage Assets"
+        press=".onAssetManagement"/>
+
+    <GenericTile
+        id="navEmployeeTile"
+        header="Employee Management"
+        subheader="Manage Employees"
+        press=".onEmployeeManagement"/>
+
+    <GenericTile
+        id="navAssignmentTile"
+        header="Asset Assignment"
+        subheader="Assign Assets"
+        press=".onAssignmentManagement"/>
+
+    <GenericTile
+        id="navMaintenanceTile"
+        header="Maintenance"
+        subheader="Track Repairs"
+        press=".onMaintenanceManagement"/>
+
+    <GenericTile
+        id="navOwnershipTile"
+        header="Ownership Ledger"
+        subheader="Asset History"
+        press=".onOwnershipLedger"/>
+
+    <GenericTile
+        id="navArchiveTile"
+        header="Archive Management"
+        subheader="Archived Assets"
+        press=".onArchiveManagement"/>
+
+    <GenericTile
+        id="navReportsTile"
+        header="Reports &amp; Export"
+        subheader="Business Reports"
+        press=".onReports"/>
+
+</HBox>
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>
