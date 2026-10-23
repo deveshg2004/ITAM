@@ -98,22 +98,22 @@ sap.ui.define([
 
             onAssetManagement() {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.assetui/index.html";
+                "/asset.lifecycle.assetui/index.html";
             },
 
             onEmployeeManagement() {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.employeeui/index.html";
+                "/asset.lifecycle.employeeui/index.html";
             },
 
             onAssignmentManagement() {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.assetassignmentui/index.html";
+                "/asset.lifecycle.assetassignmentui/index.html";
             },
 
             onMaintenanceManagement() {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.maintenanceui/index.html";
+                "/asset.lifecycle.maintenanceui/index.html";
             }
 
         }

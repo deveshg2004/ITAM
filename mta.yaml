@@ -12,6 +12,7 @@ build-parameters:
       commands:
         - npm ci
         - npx cds build --production
+        - npm run build:apps # UI5 apps + launcher next to the CAP server (gen/srv/app)
 
 modules:
   - name: it-asset-lifecycle-manager-srv
@@ -19,6 +20,7 @@ modules:
     path: gen/srv
     parameters:
       instances: 1
+      memory: 512M
       buildpack: nodejs_buildpack
     build-parameters:
       builder: npm-ci
@@ -34,6 +36,7 @@ modules:
     type: hdb
     path: gen/db
     parameters:
+      memory: 256M
       buildpack: nodejs_buildpack
     requires:
       - name: it-asset-lifecycle-manager-db

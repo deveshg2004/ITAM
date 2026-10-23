@@ -19,7 +19,8 @@
     "watch-manager-dashboard-ui": "cds watch --open asset.lifecycle.managerdashboardui/index.html?sap-ui-xx-viewCache=false --livereload false",
     "watch-department-ui": "cds watch --open asset.lifecycle.departmentui/index.html?sap-ui-xx-viewCache=false --livereload false",
     "watch-reports-ui": "cds watch --open asset.lifecycle.reportsui/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-employee-dashboard-ui": "cds watch --open asset.lifecycle.employeedashboardui/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-employee-dashboard-ui": "cds watch --open asset.lifecycle.employeedashboardui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "build:apps": "node scripts/build-apps.js"
   },
   "dependencies": {
     "@cap-js/hana": "^3.1.2",
@@ -44,13 +45,13 @@
     "cds-plugin-ui5": "^0.17.0"
   },
   "cds": {
-  "requires": {
-    "[hybrid]": {
-      "auth": "xsuaa"
-    },
-    "[production]": {
-      "auth": "xsuaa"
+    "requires": {
+      "[hybrid]": {
+        "auth": "xsuaa"
+      },
+      "[production]": {
+        "auth": "xsuaa"
+      }
     }
   }
-}
 }

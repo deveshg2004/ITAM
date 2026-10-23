@@ -12,22 +12,22 @@ sap.ui.define([
 
             onAssetReport() {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.assetui/index.html";
+                "/asset.lifecycle.assetui/index.html";
             },
 
             onEmployeeReport() {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.employeeui/index.html";
+                "/asset.lifecycle.employeeui/index.html";
             },
 
             onMaintenanceReport() {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.maintenanceui/index.html";
+                "/asset.lifecycle.maintenanceui/index.html";
             },
 
             onAssignmentReport() {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.assetassignmentui/index.html";
+                "/asset.lifecycle.assetassignmentui/index.html";
             },
 
             onExportAssets() {
