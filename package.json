@@ -1,13 +1,13 @@
 {
   "name": "it-asset-lifecycle-manager",
   "version": "1.0.0",
-  "description": "Welcome to your new CAP project.",
+  "description": "SAP CAP IT Asset Lifecycle Manager with role-based UI5 applications.",
   "license": "ISC",
   "author": "",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --test test/*.test.js",
     "start": "npx cds serve",
     "watch-asset-ui": "cds watch --open asset.lifecycle.assetui/index.html?sap-ui-xx-viewCache=false --livereload false",
     "watch-employee-ui": "cds watch --open asset.lifecycle.employeeui/index.html?sap-ui-xx-viewCache=false --livereload false",
@@ -19,7 +19,10 @@
     "watch-manager-dashboard-ui": "cds watch --open asset.lifecycle.managerdashboardui/index.html?sap-ui-xx-viewCache=false --livereload false",
     "watch-department-ui": "cds watch --open asset.lifecycle.departmentui/index.html?sap-ui-xx-viewCache=false --livereload false",
     "watch-reports-ui": "cds watch --open asset.lifecycle.reportsui/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-employee-dashboard-ui": "cds watch --open asset.lifecycle.employeedashboardui/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-employee-dashboard-ui": "cds watch --open asset.lifecycle.employeedashboardui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "build-ui": "npm run build --workspaces --if-present",
+    "prepare-approuter": "node scripts/prepare-approuter.js",
+    "validate": "node scripts/validate-seed-data.js"
   },
   "dependencies": {
     "@cap-js/hana": "^3.1.2",
@@ -37,20 +40,7 @@
     "app/archive-ui",
     "app/department-ui"
   ],
-  "workspaces": [
-    "app/*"
-  ],
-  "devDependencies": {
-    "cds-plugin-ui5": "^0.17.0"
-  },
-  "cds": {
-  "requires": {
-    "[hybrid]": {
-      "auth": "xsuaa"
-    },
-    "[production]": {
-      "auth": "xsuaa"
-    }
-  }
-}
+  "workspaces": ["app/*"],
+  "devDependencies": {"cds-plugin-ui5": "^0.17.0"},
+  "cds": {"requires": {"[hybrid]": {"auth": "xsuaa"}, "[production]": {"auth": "xsuaa"}}}
 }
