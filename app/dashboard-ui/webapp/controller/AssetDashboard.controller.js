@@ -79,46 +79,46 @@ sap.ui.define([
 
             onAssetManagement: function () {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.assetui/index.html";
+                "/asset.lifecycle.assetui/index.html";
             },
 
             onEmployeeManagement: function () {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.employeeui/index.html";
+                "/asset.lifecycle.employeeui/index.html";
             },
 
             onAssignmentManagement: function () {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.assetassignmentui/index.html";
+                "/asset.lifecycle.assetassignmentui/index.html";
             },
 
             onMaintenanceManagement: function () {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.maintenanceui/index.html";
+                "/asset.lifecycle.maintenanceui/index.html";
             },
 
             onOwnershipLedger: function () {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.ownershipledgerui/index.html";
+                "/asset.lifecycle.ownershipledgerui/index.html";
             },
 
             onArchiveManagement: function () {
                 window.location.href =
-                "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.archiveui/index.html";
+                "/asset.lifecycle.archiveui/index.html";
             },
             onReports() {
     window.location.href =
-    "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.reportsui/index.html";
+    "/asset.lifecycle.reportsui/index.html";
 },
 
 onManagerDashboard() {
     window.location.href =
-    "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.managerdashboardui/index.html";
+    "/asset.lifecycle.managerdashboardui/index.html";
 },
 
 onEmployeeDashboard() {
     window.location.href =
-    "https://port4004-workspaces-ws-q8s4q.us10.trial.applicationstudio.cloud.sap/asset.lifecycle.employeedashboardui/index.html";
+    "/asset.lifecycle.employeedashboardui/index.html";
 },
 
         }
