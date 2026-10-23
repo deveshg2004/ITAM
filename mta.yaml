@@ -1,7 +1,7 @@
 _schema-version: 3.3.0
 ID: it-asset-lifecycle-manager
 version: 1.0.0
-description: "Welcome to your new CAP project."
+description: "SAP CAP IT Asset Lifecycle Manager"
 
 parameters:
   enable-parallel-deployments: true
@@ -12,6 +12,8 @@ build-parameters:
       commands:
         - npm ci
         - npx cds build --production
+        - npm run build-ui
+        - npm run prepare-approuter
 
 modules:
   - name: it-asset-lifecycle-manager-srv
@@ -80,17 +82,14 @@ resources:
             description: 'generated'
             role-template-references:
               - '$XSAPPNAME.Admin'
-
           - name: 'Manager (it-asset-lifecycle-manager ${org}-${space})'
             description: 'generated'
             role-template-references:
               - '$XSAPPNAME.Manager'
-
           - name: 'Employee (it-asset-lifecycle-manager ${org}-${space})'
             description: 'generated'
             role-template-references:
               - '$XSAPPNAME.Employee'
-
     requires:
       - name: app-api
 
